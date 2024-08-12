@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -17,7 +18,38 @@ func main() {
 	//mathOperations()
 	//dateAndTime()
 	// keyAndValue()
-	pointer()
+	//pointer()
+	slicesPracice()
+}
+
+func slicesPracice() {
+	var color = []string{"Red", "Orange", "Blue"}
+	fmt.Println(color)
+	color = append(color, "Purple")
+	fmt.Println(color)
+
+	color = append(color[0:len(color)])
+	fmt.Println(color)
+
+	color = append(color[1 : len(color)-1])
+	fmt.Println(color)
+
+	numbers := make(
+		[]int,
+		5,
+		5)
+	numbers[0] = 73
+	numbers[1] = 10
+	numbers[2] = 49
+	numbers[3] = 48
+	numbers[4] = 75
+	fmt.Println(numbers)
+	numbers = append(numbers, 81)
+	fmt.Println(numbers)
+
+	sort.Ints(numbers)
+	fmt.Println(numbers)
+
 }
 
 func pointer() {
