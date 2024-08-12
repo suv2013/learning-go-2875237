@@ -17,7 +17,7 @@ func main() {
 }
 
 func mathOperations() {
-	//intSum()
+	intSum()
 	intfloat()
 }
 
