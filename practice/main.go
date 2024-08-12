@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -11,7 +12,33 @@ import (
 func main() {
 	//varDeclaration()
 	//inputFromUser()
-	convertNumber()
+	//convertNumber()
+	mathOperations()
+}
+
+func mathOperations() {
+	//intSum()
+	intfloat()
+}
+
+func intfloat() {
+	//f1, f2, f3 := 1.1, 1.23, 1.234
+	f1, f2, f3 := 23.5, 65.1, 76.3
+	floatSum := f1 + f2 + f3
+	fmt.Println("Float Sum : ", floatSum)
+
+	floatSum = math.Round(floatSum*100) / 100
+	fmt.Println("Float Sum Rounded : ", floatSum)
+
+	radius := 15.5
+	circumference := radius * 2 * math.Pi
+	fmt.Printf("circumferenc %.2f", circumference)
+}
+
+func intSum() {
+	i1, i2, i3 := 1, 11, 111
+	intSum := i1 + i2 + i3
+	fmt.Println("Interger Sum : ", intSum)
 }
 
 func convertNumber() {
