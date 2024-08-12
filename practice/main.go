@@ -15,7 +15,14 @@ func main() {
 	//inputFromUser()
 	//convertNumber()
 	//mathOperations()
-	dateAndTime()
+	//dateAndTime()
+	keyAndValue()
+}
+
+func keyAndValue() {
+	k := make(map[string]int)
+	k["test"] = 42
+	fmt.Println(k)
 }
 
 func dateAndTime() {
