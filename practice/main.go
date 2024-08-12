@@ -16,7 +16,20 @@ func main() {
 	//convertNumber()
 	//mathOperations()
 	//dateAndTime()
-	keyAndValue()
+	// keyAndValue()
+	pointer()
+}
+
+func pointer() {
+	a := 45
+	aValue := &a
+	fmt.Println("Memory Address", aValue)
+	fmt.Println("Actual Value", *aValue)
+
+	//changing Value through pointer
+	*aValue = *aValue / 21
+	fmt.Println("Pointer ", *aValue)
+	fmt.Println("Varible ", a)
 }
 
 func keyAndValue() {
