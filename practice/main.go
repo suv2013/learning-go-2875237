@@ -1,11 +1,14 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 func main() {
-	varDeclaration()
+	//varDeclaration()
+	inputFromUser()
 }
 
 func varDeclaration() {
@@ -20,4 +23,11 @@ func varDeclaration() {
 	strNew := "Hello from Go!"
 	fmt.Println(strNew)
 	fmt.Printf("%T \n", strNew)
+}
+
+func inputFromUser() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter Text: ")
+	input, _ := reader.ReadString('\n')
+	fmt.Println("You Entered :", input)
 }
