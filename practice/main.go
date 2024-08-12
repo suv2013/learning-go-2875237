@@ -19,7 +19,44 @@ func main() {
 	//dateAndTime()
 	// keyAndValue()
 	//pointer()
-	slicesPracice()
+	//slicesPracice()
+	mapPractice()
+
+}
+
+func mapPractice() {
+	states := make(map[string]string)
+	states["WB"] = "West Bengal"
+	states["HYD"] = "Hyderabad"
+	states["BAN"] = "Bangalore"
+	fmt.Println(states)
+
+	westBengal := states["WB"]
+	fmt.Println(westBengal)
+
+	delete(states, "HYD")
+	fmt.Println(states)
+
+	states["DEL"] = "Delhi"
+	fmt.Println(states)
+
+	for k, v := range states {
+		fmt.Printf("%v : %v\n", k, v)
+	}
+
+	keys := make([]string, len(states))
+	i := 0
+	for k := range states {
+		keys[i] = k
+		i++
+	}
+	fmt.Println(keys)
+	sort.Strings(keys)
+	fmt.Println(keys)
+
+	for i := range keys {
+		fmt.Println(states[keys[i]])
+	}
 }
 
 func slicesPracice() {
