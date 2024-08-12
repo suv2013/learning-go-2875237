@@ -7,13 +7,24 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func main() {
 	//varDeclaration()
 	//inputFromUser()
 	//convertNumber()
-	mathOperations()
+	//mathOperations()
+	dateAndTime()
+}
+
+func dateAndTime() {
+	n := time.Now()
+	fmt.Println("Time Now is :", n)
+
+	t := time.Date(2004, time.January, 12, 9, 30, 0, 0, time.Local)
+	fmt.Println("We Got Married at", t)
+	fmt.Println(t.Format(time.ANSIC))
 }
 
 func mathOperations() {
