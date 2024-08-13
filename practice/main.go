@@ -20,8 +20,20 @@ func main() {
 	// keyAndValue()
 	//pointer()
 	//slicesPracice()
-	mapPractice()
+	//mapPractice()
+	convertToMap([]string{"a", "b", "c"})
+}
 
+func convertToMap(items []string) map[string]float64 {
+	result := make(map[string]float64)
+	itemLen := len(items)
+	var afloat float64 = float64(100 / itemLen)
+
+	for k := range items {
+		result[items[k]] = afloat
+	}
+	fmt.Println(result)
+	return result
 }
 
 func mapPractice() {
